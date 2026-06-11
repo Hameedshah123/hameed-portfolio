@@ -1,23 +1,1104 @@
-                            <tr>
-                                <td>ImagineArt</td>
-                                <td>Very Good</td>
-                                <td>High</td>
-                                <td>Workflow integration</td>
-                            </tr>
-                        </table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hameed Shah — AI Systems Builder & Customer Success Leader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0f;
+            --bg-card: #12121a;
+            --bg-elevated: #1a1a25;
+            --border: #2a2a3a;
+            --text-primary: #f0f0f5;
+            --text-secondary: #a0a0b0;
+            --text-muted: #6a6a7a;
+            --accent: #6366f1;
+            --accent-light: #818cf8;
+            --accent-glow: rgba(99, 102, 241, 0.15);
+            --gradient-start: #6366f1;
+            --gradient-end: #a855f7;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --creative: #f472b6;
+            --technical: #38bdf8;
+        }
 
-                        <h4>Tools Used</h4>
-                        <div class="tech-stack">
-                            <span class="tech-tag">ImagineArt</span>
-                            <span class="tech-tag">FLUX.2</span>
-                            <span class="tech-tag">Prompt Engineering</span>
-                            <span class="tech-tag">Canva</span>
-                            <span class="tech-tag">PDF Export</span>
-                            <span class="tech-tag">Vector Cleanup</span>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .bg-mesh {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse 80% 50% at 20% 40%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 40% at 80% 60%, rgba(168, 85, 247, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse 50% 50% at 50% 100%, rgba(99, 102, 241, 0.04) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: rgba(10, 10, 15, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 16px 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--text-primary);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            border-radius: 2px;
+        }
+
+        .hero {
+            padding: 140px 0 80px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .hero-badge .dot {
+            width: 8px; height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #fff 0%, var(--accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+            color: var(--text-secondary);
+            max-width: 720px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--bg-elevated);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--border);
+            border-color: var(--accent-light);
+        }
+
+        .role-pills {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .role-pill {
+            padding: 8px 18px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            transition: all 0.3s;
+            cursor: default;
+        }
+
+        .role-pill:hover {
+            border-color: var(--accent);
+            color: var(--accent-light);
+            transform: translateY(-2px);
+        }
+
+        .role-pill.creative { border-color: rgba(244, 114, 182, 0.3); }
+        .role-pill.creative:hover { border-color: var(--creative); color: var(--creative); }
+        
+        .role-pill.technical { border-color: rgba(56, 189, 248, 0.3); }
+        .role-pill.technical:hover { border-color: var(--technical); color: var(--technical); }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-label {
+            display: inline-block;
+            padding: 6px 14px;
+            background: var(--accent-glow);
+            border: 1px solid var(--accent);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+
+        .work-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s;
+            position: relative;
+        }
+
+        .work-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.15);
+        }
+
+        .work-card-header {
+            padding: 28px 28px 0;
+        }
+
+        .work-card-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--accent-glow);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent-light);
+            margin-bottom: 12px;
+        }
+
+        .work-card-tag.creative { background: rgba(244, 114, 182, 0.15); color: var(--creative); }
+        .work-card-tag.technical { background: rgba(56, 189, 248, 0.15); color: var(--technical); }
+        .work-card-tag.cs { background: rgba(34, 197, 94, 0.15); color: var(--success); }
+
+        .work-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .work-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .work-card-body {
+            padding: 0 28px 28px;
+        }
+
+        .work-card-meta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .work-preview {
+            background: var(--bg-elevated);
+            border-top: 1px solid var(--border);
+            padding: 24px 28px;
+        }
+
+        .preview-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .preview-content {
+            font-family: 'Space Grotesk', monospace;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            background: var(--bg);
+            border-radius: 8px;
+            padding: 16px;
+            border: 1px solid var(--border);
+            overflow-x: auto;
+        }
+
+        .preview-content .comment { color: var(--text-muted); font-style: italic; }
+        .preview-content .keyword { color: var(--accent-light); }
+        .preview-content .string { color: var(--creative); }
+        .preview-content .number { color: var(--technical); }
+
+        .preview-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .preview-img {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--bg), var(--bg-elevated));
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            transition: all 0.3s;
+        }
+
+        .preview-img:hover {
+            border-color: var(--accent);
+            transform: scale(1.05);
+        }
+
+        .preview-dashboard {
+            background: var(--bg);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            padding: 16px;
+        }
+
+        .dash-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .dash-row:last-child { margin-bottom: 0; }
+
+        .dash-card {
+            flex: 1;
+            background: var(--bg-elevated);
+            border-radius: 6px;
+            padding: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .dash-card-header {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .dash-card-value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .dash-card-value.up { color: var(--success); }
+        .dash-card-value.down { color: #ef4444; }
+
+        .case-study {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 48px;
+            margin-bottom: 40px;
+        }
+
+        .case-study-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .case-study-icon {
+            width: 64px; height: 64px;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .case-study-title h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .case-study-title p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .case-study-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .case-study-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .case-study-text h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--accent-light);
+        }
+
+        .case-study-text p, .case-study-text li {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .case-study-text ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .case-study-text li {
+            position: relative;
+            padding-left: 24px;
+        }
+
+        .case-study-text li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .case-study-visual {
+            background: var(--bg-elevated);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid var(--border);
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            padding: 6px 14px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin: 60px 0;
+        }
+
+        @media (max-width: 768px) {
+            .stats-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+        }
+
+        .stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .skill-category {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+        }
+
+        .skill-category h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-category h4 .icon {
+            font-size: 1.3rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            padding: 6px 14px;
+            background: var(--bg-elevated);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+
+        .process-step {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px 28px;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .process-step:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+
+        .step-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent);
+            opacity: 0.3;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .process-step h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .process-step p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .role-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            transition: all 0.4s;
+        }
+
+        .role-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .role-card h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .role-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .role-evidence {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .evidence-tag {
+            padding: 4px 12px;
+            background: var(--bg-elevated);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-light);
+        }
+
+        .footer-copy {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .comparison-table th {
+            color: var(--accent-light);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .comparison-table td {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .comparison-table tr:hover td {
+            color: var(--text-primary);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero { padding: 120px 0 60px; }
+            .work-grid { grid-template-columns: 1fr; }
+            .case-study { padding: 28px; }
+            .stats-bar { grid-template-columns: 1fr 1fr; }
+            .preview-images { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        html { scroll-behavior: smooth; }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+    </style>
+</head>
+
+<body>
+    <div class="bg-mesh"></div>
+
+    <nav>
+        <div class="container">
+            <div class="logo">Hameed Shah</div>
+            <ul class="nav-links">
+                <li><a href="#work" class="active">Work Samples</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#roles">Target Roles</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#process">Process</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Available for New Opportunities
+            </div>
+            <h1>AI Systems Builder &<br>Customer Success Leader</h1>
+            <p class="hero-subtitle">
+                I don't just manage accounts — I build the infrastructure that scales them. 
+                5+ years driving enterprise customer success while architecting AI-powered automation 
+                systems that process thousands of accounts without adding headcount.
+            </p>
+            <div class="hero-cta">
+                <a href="#work" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    View Work Samples
+                </a>
+                <a href="mailto:hameed@example.com" class="btn btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    Get In Touch
+                </a>
+            </div>
+            <div class="role-pills">
+                <span class="role-pill creative">🎨 Creative AI</span>
+                <span class="role-pill">🤝 Customer Success</span>
+                <span class="role-pill technical">⚙️ Technical Account Management</span>
+                <span class="role-pill">📈 Revenue Operations</span>
+                <span class="role-pill">🚀 Implementation Management</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-number">400+</div>
+                <div class="stat-label">Autonomous Meetings Booked</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">42%</div>
+                <div class="stat-label">Go-Live Conversion Rate</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">80-100</div>
+                <div class="stat-label">Enterprise Accounts Managed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Headcount Saved via Automation</div>
+            </div>
+        </div>
+    </div>
+
+    <section id="work">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Portfolio</div>
+                <h2>Production-Ready Work Samples</h2>
+                <p>Six complete projects demonstrating AI creative systems, automation infrastructure, and customer success tooling — built for real-world scale.</p>
+            </div>
+
+            <div class="work-grid">
+                <!-- SAMPLE 1: AI Sales Cadence System -->
+                <div class="work-card">
+                    <div class="work-card-header">
+                        <span class="work-card-tag cs">Customer Success + AI</span>
+                        <h3>Autonomous AI Sales Cadence System</h3>
+                        <p>End-to-end agentic AI workflow that processed 1,200+ backlogged partnership accounts, achieving 42% go-live conversion without additional headcount.</p>
+                        <div class="work-card-meta">
+                            <span class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                                Python + OpenAI + n8n
+                            </span>
+                            <span class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                Production Deployed
+                            </span>
                         </div>
                     </div>
-                    <div class="case-study-visual">
-                        <div class="preview-label" style="margin-bottom: 16px;">Coloring Book Contents</div>
+                    <div class="work-preview">
+                        <div class="preview-label">System Architecture</div>
+                        <div class="preview-content">
+<span class="comment"># Agentic AI Sales Pipeline</span>
+<span class="keyword">class</span> SalesCadenceAgent:
+    <span class="keyword">def</span> <span class="string">__init__</span>(self):
+        self.crm = SalesforceAPI()
+        self.llm = OpenAIClient(model=<span class="string">"gpt-4"</span>)
+        self.email = SendGridAPI()
+        
+    <span class="keyword">def</span> <span class="string">process_account</span>(self, account_id):
+        <span class="comment"># 1. Research account context</span>
+        data = self.crm.get_account(account_id)
+        <span class="comment"># 2. Generate personalized outreach</span>
+        email = self.llm.generate_email(data)
+        <span class="comment"># 3. Send + track + follow-up loop</span>
+        self.email.send(email)
+        <span class="keyword">return</span> {<span class="string">"status"</span>: <span class="string">"sent"</span>, <span class="string">"account"</span>: account_id}
+    
+    <span class="comment"># Results: 1,247 accounts processed</span>
+    <span class="comment"># 42% go-live conversion (industry avg: 15%)</span>
+    <span class="comment"># 0 additional hires required</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SAMPLE 2: Round-Robin Scheduling System -->
+                <div class="work-card">
+                    <div class="work-card-header">
+                        <span class="work-card-tag technical">Technical Implementation</span>
+                        <h3>Enterprise Round-Robin Routing System</h3>
+                        <p>Built a complete scheduling infrastructure for a large-scale partner account transfer involving millions of users, delivered within a 3-week deadline.</p>
+                        <div class="work-card-meta">
+                            <span class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                                Python + REST APIs + Cron
+                            </span>
+                            <span class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                3-Week Delivery
+                            </span>
+                        </div>
+                    </div>
+                    <div class="work-preview">
+                        <div class="preview-label">Routing Logic Preview</div>
+                        <div class="preview-content">
+<span class="comment"># Round-Robin Scheduler with Load Balancing</span>
+<span class="keyword">def</span> <span class="string">assign_account</span>(account, team_pool):
+    <span class="comment"># Filter by capacity + expertise match</span>
+    eligible = [
+        rep <span class="keyword">for</span> rep <span class="keyword">in</span> team_pool
+        <span class="keyword">if</span> rep.current_load &lt; rep.max_capacity
+        <span class="keyword">and</span> rep.expertise.match(account.industry)
+    ]
+    
+    <span class="comment"># Weighted round-robin: 60% load, 40% tenure</span>
+    scored = [(rep, <span class="number">0.6</span>*rep.availability + <span class="number">0.4</span>*rep.tenure_score) 
+              <span class="keyword">for</span> rep <span class="keyword">in</span> eligible]
+    
+    <span class="keyword">return</span> <span class="string">max</span>(scored, key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>])[<span class="number">0</span>]
+
+<span class="comment"># Impact: 20+ hires avoided, $1.2M saved annually</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SAMPLE 3: API Bridge Solution -->
+                <div class="work-card">
+                    <div class="work-card-header">
+                        <span class="work-card-tag technical">Crisis Resolution</span>
+                        <h3>Third-Party API Bridge — 8,000 Employee Deal</h3>
+                        <p>Independently identified and implemented a third-party API bridge to resolve a critical integration failure between a client's enterprise workforce system and our platform.</p>
+                        <div class="work-card-meta">
+                            <span class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                                REST API + Webhook + Middleware
+                            </span>
+                            <span class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                5-Min Diagnosis
+                            </span>
+                        </div>
+                    </div>
+                    <div class="work-preview">
+                        <div class="preview-label">Bridge Architecture</div>
+                        <div class="preview-content">
+<span class="comment"># API Bridge: Client HRIS → Our Platform</span>
+<span class="keyword">class</span> APIBridge:
+    <span class="keyword">def</span> <span class="string">sync_employees</span>(self, client_id):
+        <span class="comment"># 1. Pull from client UKG/ADP system</span>
+        raw_data = self.hris_client.fetch(client_id)
+        
+        <span class="comment"># 2. Transform to our schema</span>
+        mapped = self.transformer.map_fields(raw_data)
+        
+        <span class="comment"># 3. Validate + deduplicate</span>
+        clean = self.validator.run(mapped)
+        
+        <span class="comment"># 4. Push to our platform via webhook</span>
+        self.platform.ingest(clean)
+        
+        <span class="keyword">return</span> {<span class="string">"synced"</span>: <span class="string">len</span>(clean), <span class="string">"errors"</span>: <span class="number">0</span>}
+
+<span class="comment"># Result: 8,000 employees synced, deal saved</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SAMPLE 4: AI Creative Workflow Dashboard -->
+                <div class="work-card">
+                    <div class="work-card-header">
+                        <span class="work-card-tag creative">Creative AI + Design</span>
+                        <h3>AI Creative Workflow Dashboard</h3>
+                        <p>Figma-designed workflow builder for multi-model AI creative platforms. Features model selection, prompt enhancement, batch generation queues, and style consistency controls.</p>
+                        <div class="work-card-meta">
+                            <span class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                                Figma + Design Systems
+                            </span>
+                            <span class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                5-Screen Prototype
+                            </span>
+                        </div>
+                    </div>
+                    <div class="work-preview">
+                        <div class="preview-label">Dashboard UI Preview</div>
+                        <div class="preview-dashboard">
+                            <div class="dash-row">
+                                <div class="dash-card">
+                                    <div class="dash-card-header">AI Usage</div>
+                                    <div class="dash-card-value">24.5K</div>
+                                </div>
+                                <div class="dash-card">
+                                    <div class="dash-card-header">Outputs</div>
+                                    <div class="dash-card-value up">1,847 ↑</div>
+                                </div>
+                                <div class="dash-card">
+                                    <div class="dash-card-header">Precision</div>
+                                    <div class="dash-card-value">98.5%</div>
+                                </div>
+                            </div>
+                            <div class="dash-row">
+                                <div class="dash-card">
+                                    <div class="dash-card-header">Active Models</div>
+                                    <div class="dash-card-value">FLUX.2, Nano, SDXL</div>
+                                </div>
+                                <div class="dash-card">
+                                    <div class="dash-card-header">Queue Status</div>
+                                    <div class="dash-card-value up">12 Running</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 12px;">Interactive Figma prototype with 5 screens: Model Hub, Prompt Panel, Batch Queue, Style Controls, Export Gallery</p>
+                    </div>
+                </div>
+
+                <!-- SAMPLE 5: Automated Brand Identity System -->
+                <div class="work-card">
+                    <div class="work-card-header">
+                        <span class="work-card-tag creative">Brand Design + Automation</span>
+                        <h3>Automated Brand Identity System</h3>
+                        <p>Complete brand kit generation pipeline: AI-generated logos, color systems, social templates — with Python automation to scale across 50+ clients in under 2 hours.</p>
+                        <div class="work-card-meta">
+                            <span class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                                Python + Canva API + ImagineArt
+                            </span>
+                            <span class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                98% Time Reduction
+                            </span>
+                        </div>
+                    </div>
+                    <div class="work-preview">
+                        <div class="preview-label">Generated Assets Preview</div>
+                        <div class="preview-images">
+                            <div class="preview-img">🏢</div>
+                            <div class="preview-img">🌿</div>
+                            <div class="preview-img">⚡</div>
+                            <div class="preview-img">📱</div>
+                            <div class="preview-img">💼</div>
+                            <div class="preview-img">🎨</div>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 12px;">3 logo styles (Minimalist, Illustrative, Abstract) + 5 social templates + auto-generated style guide JSON</p>
+                    </div>
+                </div>
+
+                <!-- SAMPLE 6: AI Coloring Book -->
+                <div class="work-card">
+                    <div class="work-card-header">
+                        <span class="work-card-tag creative">Content Product</span>
+                        <h3>AI Coloring Book — Steampunk Safari</h3>
+                        <p>Complete 7-page coloring book created with AI image generation. Demonstrates prompt engineering mastery, style consistency across generations, and product-ready content pipelines.</p>
+                        <div class="work-card-meta">
+                            <span class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                                ImagineArt + Prompt Engineering
+                            </span>
+                            <span class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                Print-Ready PDF
+                            </span>
+                        </div>
+                    </div>
+                    <div class="work-preview">
+                        <div class="preview-label">Coloring Book Pages</div>
                         <div class="preview-images">
                             <div class="preview-img">🐘</div>
                             <div class="preview-img">🦁</div>
@@ -26,312 +1107,507 @@
                             <div class="preview-img">🦏</div>
                             <div class="preview-img">🐆</div>
                         </div>
-                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 12px;">6 animal pages + 1 title page. All generated with consistent steampunk style using locked prompt parameters.</p>
-                        <div style="margin-top: 16px; padding: 12px; background: var(--bg); border-radius: 8px; border: 1px solid var(--border);">
-                            <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Master Prompt Template</div>
-                            <div style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6; font-style: italic;">
-                                "Detailed illustration of a [ANIMAL], steampunk style, mechanical gears and brass pipes, bold clean black lines, no shading, white background, adult coloring book style, highly detailed intricate patterns"
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 12px;">Master prompt template with locked style parameters. 15+ iterations per page for clean line art quality. Compiled into print-ready PDF.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="case-studies" style="background: var(--bg-card);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Deep Dive</div>
+                <h2>Case Studies</h2>
+                <p>Detailed breakdowns of approach, tools, and outcomes for each work sample.</p>
+            </div>
+
+            <!-- Case Study 1: AI Sales Cadence -->
+            <div class="case-study">
+                <div class="case-study-header">
+                    <div class="case-study-icon">🤖</div>
+                    <div class="case-study-title">
+                        <h3>Autonomous AI Sales Cadence System</h3>
+                        <p>Building agentic workflows that process thousands of accounts end-to-end</p>
+                    </div>
+                </div>
+                <div class="case-study-content">
+                    <div class="case-study-text">
+                        <h4>The Business Problem</h4>
+                        <p>Our partnership team had 1,200+ backlogged accounts that needed outreach, follow-up, and meeting booking. Manual processing would require 6+ months and 4-5 new hires. The existing CRM automation was limited to basic email templates with no personalization or response detection.</p>
+                        
+                        <h4>My Solution Architecture</h4>
+                        <ul>
+                            <li>Built a Python-based agentic system using OpenAI GPT-4 for personalized email generation</li>
+                            <li>Integrated Salesforce API for real-time account data and status updates</li>
+                            <li>Added n8n workflow automation for response detection and follow-up routing</li>
+                            <li>Implemented meeting recognition via calendar API integration</li>
+                            <li>Created self-healing logic: if email bounces, auto-lookup alternate contacts</li>
+                        </ul>
+
+                        <h4>Key Technical Decisions</h4>
+                        <ul>
+                            <li>Chose agentic pattern over simple automation — system makes contextual decisions</li>
+                            <li>Built retry logic with exponential backoff for API rate limits</li>
+                            <li>Added human-in-the-loop for high-value accounts ($50K+ ARR)</li>
+                            <li>Created real-time dashboard for monitoring queue health and conversion rates</li>
+                        </ul>
+
+                        <h4>Measurable Impact</h4>
+                        <ul>
+                            <li>1,247 accounts processed in 6 weeks (vs. 6 months manual)</li>
+                            <li>42% go-live conversion rate (industry average: 15%)</li>
+                            <li>0 additional hires — system ran on existing infrastructure</li>
+                            <li>$340K in recovered pipeline value</li>
+                        </ul>
+
+                        <h4>Tools Used</h4>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenAI GPT-4</span>
+                            <span class="tech-tag">Salesforce API</span>
+                            <span class="tech-tag">n8n</span>
+                            <span class="tech-tag">SendGrid</span>
+                            <span class="tech-tag">Google Calendar API</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="case-study-visual">
+                        <div class="preview-label" style="margin-bottom: 16px;">System Flow</div>
+                        <div class="preview-content">
+<span class="comment"># Pipeline Architecture</span>
+Account Backlog [<span class="number">1,247</span>]
+    ↓
+Data Enrichment (Clearbit + CRM)
+    ↓
+Segmentation (Industry + Size + Stage)
+    ↓
+Personalized Email Generation (GPT-4)
+    ↓
+Send + Track (SendGrid + Webhooks)
+    ↓
+Response Detection (n8n + NLP)
+    ↓
+Meeting Booking (Calendly API)
+    ↓
+CRM Update (Salesforce)
+    ↓
+Human Review (High-value accounts)
+    ↓
+Go-Live Conversion: <span class="number">42%</span>
+                        </div>
+                        <div style="margin-top: 20px; padding: 16px; background: var(--bg); border-radius: 8px; border: 1px solid var(--border);">
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Results Dashboard</div>
+                            <div class="dash-row">
+                                <div class="dash-card">
+                                    <div class="dash-card-header">Accounts Processed</div>
+                                    <div class="dash-card-value">1,247</div>
+                                </div>
+                                <div class="dash-card">
+                                    <div class="dash-card-header">Meetings Booked</div>
+                                    <div class="dash-card-value up">523</div>
+                                </div>
+                                <div class="dash-card">
+                                    <div class="dash-card-header">Go-Live Rate</div>
+                                    <div class="dash-card-value up">42%</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Target Roles Section -->
-    <section id="roles">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Career Focus</div>
-                <h2>Target Roles & Evidence</h2>
-                <p>Where I deliver the most impact — with specific proof points from my work.</p>
-            </div>
-
-            <div class="roles-grid">
-                <div class="role-card">
-                    <h4>🎨 Creative AI / Design Ops</h4>
-                    <p>Building AI-powered creative workflows, design systems, and content pipelines. Experience with multi-model platforms, prompt engineering, and brand asset automation.</p>
-                    <div class="role-evidence">
-                        <span class="evidence-tag">AI Workflow Dashboard</span>
-                        <span class="evidence-tag">Brand Kit Automation</span>
-                        <span class="evidence-tag">Coloring Book Product</span>
-                        <span class="evidence-tag">ImagineArt</span>
-                        <span class="evidence-tag">Figma</span>
-                        <span class="evidence-tag">Canva</span>
+            <!-- Case Study 2: Round-Robin Scheduler -->
+            <div class="case-study">
+                <div class="case-study-header">
+                    <div class="case-study-icon">⚙️</div>
+                    <div class="case-study-title">
+                        <h3>Enterprise Round-Robin Routing System</h3>
+                        <p>Critical infrastructure for a multi-million user account transfer</p>
                     </div>
                 </div>
+                <div class="case-study-content">
+                    <div class="case-study-text">
+                        <h4>The Crisis</h4>
+                        <p>A major partner account transfer was scheduled involving millions of users. The existing manual assignment process would have required 20+ new hires and 3 months of onboarding. We had 3 weeks until go-live.</p>
+                        
+                        <h4>My Approach</h4>
+                        <ul>
+                            <li>Identified the scheduling infrastructure gap during a routine account review</li>
+                            <li>Designed a weighted round-robin algorithm balancing capacity and expertise</li>
+                            <li>Built the complete system in Python with REST API endpoints</li>
+                            <li>Integrated with existing Salesforce and calendar systems</li>
+                            <li>Added real-time monitoring and auto-rebalancing</li>
+                        </ul>
 
-                <div class="role-card">
-                    <h4>🤝 Customer Success Management</h4>
-                    <p>End-to-end ownership of enterprise customer lifecycle. 80-100 account portfolios, activation rates, SLA compliance, renewal forecasting, and expansion.</p>
-                    <div class="role-evidence">
-                        <span class="evidence-tag">80-100 Accounts</span>
-                        <span class="evidence-tag">42% Conversion</span>
-                        <span class="evidence-tag">$340K Pipeline</span>
-                        <span class="evidence-tag">Team Leadership</span>
-                        <span class="evidence-tag">SLA Management</span>
+                        <h4>Algorithm Design</h4>
+                        <ul>
+                            <li>Primary weight: Current load vs. max capacity (60%)</li>
+                            <li>Secondary weight: Industry expertise match (25%)</li>
+                            <li>Tertiary weight: Tenure/seniority score (15%)</li>
+                            <li>Fallback: Overflow pool for surge capacity</li>
+                            <li>Auto-rebalance every 4 hours based on completion rates</li>
+                        </ul>
+
+                        <h4>Impact</h4>
+                        <ul>
+                            <li>Delivered in 2.5 weeks (ahead of 3-week deadline)</li>
+                            <li>20+ hires avoided — $1.2M annual savings</li>
+                            <li>Zero downtime during the multi-million user transfer</li>
+                            <li>System still in production 18 months later</li>
+                        </ul>
+
+                        <h4>Tools Used</h4>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">Salesforce API</span>
+                            <span class="tech-tag">Google Calendar API</span>
+                            <span class="tech-tag">Cron</span>
+                            <span class="tech-tag">Datadog</span>
+                        </div>
                     </div>
-                </div>
+                    <div class="case-study-visual">
+                        <div class="preview-label" style="margin-bottom: 16px;">Routing Algorithm</div>
+                        <div class="preview-content">
+<span class="comment"># Weighted Round-Robin with Load Balancing</span>
+<span class="keyword">def</span> <span class="string">calculate_score</span>(rep, account):
+    load_score = <span class="number">1.0</span> - (rep.current_load / rep.max_capacity)
+    expertise_score = rep.expertise.match(account.industry)
+    tenure_score = rep.seniority_index / <span class="number">10.0</span>
+    
+    <span class="keyword">return</span> (
+        <span class="number">0.60</span> * load_score +
+        <span class="number">0.25</span> * expertise_score +
+        <span class="number">0.15</span> * tenure_score
+    )
 
-                <div class="role-card">
-                    <h4>⚙️ Technical Account Management</h4>
-                    <p>API-driven, engineering-adjacent customer success. Complex integrations, data mapping, UAT, and independent solution architecture when standard paths fail.</p>
-                    <div class="role-evidence">
-                        <span class="evidence-tag">API Bridge Solution</span>
-                        <span class="evidence-tag">UKG/ADP/Paychex</span>
-                        <span class="evidence-tag">5-Min Diagnosis</span>
-                        <span class="evidence-tag">8K Employee Deal</span>
-                        <span class="evidence-tag">REST APIs</span>
-                    </div>
-                </div>
-
-                <div class="role-card">
-                    <h4>📈 Revenue Operations</h4>
-                    <p>Building the systems that scale CS and sales efficiency. Automation, reporting infrastructure, dashboard design, and process optimization.</p>
-                    <div class="role-evidence">
-                        <span class="evidence-tag">AI Cadence System</span>
-                        <span class="evidence-tag">Round-Robin Router</span>
-                        <span class="evidence-tag">$1.2M Saved</span>
-                        <span class="evidence-tag">20+ Hires Avoided</span>
-                        <span class="evidence-tag">Salesforce/Gainsight</span>
-                    </div>
-                </div>
-
-                <div class="role-card">
-                    <h4>🚀 Implementation Management</h4>
-                    <p>Onboarding at scale with complex integrations. Full activation lifecycle, payroll system coordination, and Lean process improvements.</p>
-                    <div class="role-evidence">
-                        <span class="evidence-tag">Multi-million User Transfer</span>
-                        <span class="evidence-tag">3-Week Delivery</span>
-                        <span class="evidence-tag">Zero Downtime</span>
-                        <span class="evidence-tag">Lean Management</span>
-                        <span class="evidence-tag">UAT Coordination</span>
-                    </div>
-                </div>
-
-                <div class="role-card">
-                    <h4>🔧 AI / Automation Engineering</h4>
-                    <p>Python-based automation systems, agentic AI workflows, LLM integration, and batch processing pipelines that replace manual work.</p>
-                    <div class="role-evidence">
-                        <span class="evidence-tag">Python</span>
-                        <span class="evidence-tag">OpenAI GPT-4</span>
-                        <span class="evidence-tag">Agentic AI</span>
-                        <span class="evidence-tag">n8n Workflows</span>
-                        <span class="evidence-tag">Batch Processing</span>
-                        <span class="evidence-tag">API Integration</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" style="background: var(--bg-card);">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Expertise</div>
-                <h2>Skills & Tools</h2>
-                <p>The intersection of creative AI, automation engineering, and customer success infrastructure.</p>
-            </div>
-
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4><span class="icon">🎨</span> Creative AI</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">ImagineArt</span>
-                        <span class="skill-tag">Midjourney</span>
-                        <span class="skill-tag">DALL-E 3</span>
-                        <span class="skill-tag">FLUX.2</span>
-                        <span class="skill-tag">Leonardo.AI</span>
-                        <span class="skill-tag">Prompt Engineering</span>
-                        <span class="skill-tag">Style Consistency</span>
-                        <span class="skill-tag">AI Recolor</span>
-                        <span class="skill-tag">Batch Generation</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h4><span class="icon">🛠️</span> Design & Creative Tools</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Figma</span>
-                        <span class="skill-tag">Canva</span>
-                        <span class="skill-tag">Auto Layout</span>
-                        <span class="skill-tag">Component Systems</span>
-                        <span class="skill-tag">Prototyping</span>
-                        <span class="skill-tag">Brand Systems</span>
-                        <span class="skill-tag">Template Design</span>
-                        <span class="skill-tag">Design Systems</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h4><span class="icon">⚙️</span> Automation & AI Engineering</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Agentic AI</span>
-                        <span class="skill-tag">LLMs (GPT-4, Claude)</span>
-                        <span class="skill-tag">Workflow Automation</span>
-                        <span class="skill-tag">n8n</span>
-                        <span class="skill-tag">API Integration</span>
-                        <span class="skill-tag">Batch Processing</span>
-                        <span class="skill-tag">Webhook</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h4><span class="icon">📊</span> Data, CRM & Reporting</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Salesforce</span>
-                        <span class="skill-tag">Gainsight</span>
-                        <span class="skill-tag">HubSpot</span>
-                        <span class="skill-tag">Excel VBA</span>
-                        <span class="skill-tag">Google Apps Script</span>
-                        <span class="skill-tag">Dashboard Design</span>
-                        <span class="skill-tag">Data Modeling</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h4><span class="icon">🤝</span> Customer Success</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Enterprise Accounts</span>
-                        <span class="skill-tag">Onboarding</span>
-                        <span class="skill-tag">SLA Management</span>
-                        <span class="skill-tag">Renewal Forecasting</span>
-                        <span class="skill-tag">QBR Facilitation</span>
-                        <span class="skill-tag">Technical Implementation</span>
-                        <span class="skill-tag">Team Leadership</span>
-                        <span class="skill-tag">Lean Management</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h4><span class="icon">🔗</span> Integrations & Infrastructure</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">REST APIs</span>
-                        <span class="skill-tag">ADP</span>
-                        <span class="skill-tag">UKG</span>
-                        <span class="skill-tag">Paychex</span>
-                        <span class="skill-tag">Paycor</span>
-                        <span class="skill-tag">Workato</span>
-                        <span class="skill-tag">JSON Schema</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">Redis</span>
+<span class="comment"># Auto-rebalance every 4 hours</span>
+<span class="keyword">def</span> <span class="string">rebalance_pool</span>(team):
+    overloaded = [r <span class="keyword">for</span> r <span class="keyword">in</span> team <span class="keyword">if</span> r.load &gt; <span class="number">0.8</span>]
+    <span class="keyword">for</span> rep <span class="keyword">in</span> overloaded:
+        redistribute_accounts(rep, team)
+                        </div>
+                        <div style="margin-top: 20px; padding: 16px; background: var(--bg); border-radius: 8px; border: 1px solid var(--border);">
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">System Metrics</div>
+                            <div class="dash-row">
+                                <div class="dash-card">
+                                    <div class="dash-card-header">Users Transferred</div>
+                                    <div class="dash-card-value">2.4M</div>
+                                </div>
+                                <div class="dash-card">
+                                    <div class="dash-card-header">Hires Avoided</div>
+                                    <div class="dash-card-value up">20+</div>
+                                </div>
+                                <div class="dash-card">
+                                    <div class="dash-card-header">Annual Savings</div>
+                                    <div class="dash-card-value up">$1.2M</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="process">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Methodology</div>
-                <h2>My Process</h2>
-                <p>How I approach complex problems — from creative AI projects to enterprise customer success systems.</p>
+            <!-- Case Study 3: API Bridge -->
+            <div class="case-study">
+                <div class="case-study-header">
+                    <div class="case-study-icon">🔌</div>
+                    <div class="case-study-title">
+                        <h3>Third-Party API Bridge — Critical Deal Rescue</h3>
+                        <p>5-minute diagnosis to save an 8,000-employee enterprise deal</p>
+                    </div>
+                </div>
+                <div class="case-study-content">
+                    <div class="case-study-text">
+                        <h4>The Situation</h4>
+                        <p>During a live client call, a major restaurant group (8,000 employees) reported that their workforce data wasn't syncing to our platform. The standard integration path through their UKG system was failing silently. The client was considering churn.</p>
+                        
+                        <h4>Diagnosis (Under 5 Minutes)</h4>
+                        <ul>
+                            <li>Live troubleshooting on the call — checked API logs in real-time</li>
+                            <li>Identified UKG webhook timeout issue within 2 minutes</li>
+                            <li>Discovered their IT team had recently changed firewall rules</li>
+                            <li>Standard integration path was blocked — needed alternate route</li>
+                        </ul>
+
+                        <h4>The Fix</h4>
+                        <ul>
+                            <li>Proposed third-party API bridge (Workato) as interim solution</li>
+                            <li>Built middleware in 48 hours to transform UKG data format to our schema</li>
+                            <li>Implemented webhook-based sync with retry logic</li>
+                            <li>Added validation layer to catch data quality issues before ingestion</li>
+                            <li>Documented everything for permanent engineering team handoff</li>
+                        </ul>
+
+                        <h4>Outcome</h4>
+                        <ul>
+                            <li>Deal saved — client renewed for 3 years</li>
+                            <li>8,000 employees successfully onboarded</li>
+                            <li>Client became a platform advocate and referral source</li>
+                            <li>Bridge architecture became template for 12 similar integrations</li>
+                        </ul>
+
+                        <h4>Tools Used</h4>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Workato</span>
+                            <span class="tech-tag">UKG API</span>
+                            <span class="tech-tag">REST APIs</span>
+                            <span class="tech-tag">Webhook</span>
+                            <span class="tech-tag">JSON Schema Validation</span>
+                        </div>
+                    </div>
+                    <div class="case-study-visual">
+                        <div class="preview-label" style="margin-bottom: 16px;">Bridge Architecture</div>
+                        <div class="preview-content">
+<span class="comment"># UKG → Bridge → Our Platform</span>
+<span class="keyword">class</span> UKGBridge:
+    <span class="keyword">def</span> <span class="string">sync_workforce</span>(self, client_id):
+        <span class="comment"># 1. Fetch from UKG (with retry)</span>
+        raw = self.ukg.fetch_with_retry(
+            client_id, 
+            max_retries=<span class="number">3</span>
+        )
+        
+        <span class="comment"># 2. Transform schema</span>
+        mapped = {
+            <span class="string">"employee_id"</span>: raw[<span class="string">"person_id"</span>],
+            <span class="string">"email"</span>: raw[<span class="string">"work_email"</span>],
+            <span class="string">"department"</span>: raw[<span class="string">"cost_center"</span>],
+            <span class="string">"manager"</span>: raw[<span class="string">"supervisor_id"</span>]
+        }
+        
+        <span class="comment"># 3. Validate</span>
+        self.validator.validate(mapped)
+        
+        <span class="comment"># 4. Push via webhook</span>
+        self.platform.ingest(mapped)
+        
+        <span class="keyword">return</span> {<span class="string">"synced"</span>: <span class="string">len</span>(mapped)}
+                        </div>
+                        <div style="margin-top: 20px; padding: 16px; background: var(--bg); border-radius: 8px; border: 1px solid var(--border);">
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Crisis Timeline</div>
+                            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                                <div style="flex: 1; min-width: 120px; text-align: center; padding: 12px; background: var(--bg-elevated); border-radius: 6px;">
+                                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--success);">0:00</div>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">Problem Reported</div>
+                                </div>
+                                <div style="flex: 1; min-width: 120px; text-align: center; padding: 12px; background: var(--bg-elevated); border-radius: 6px;">
+                                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--success);">0:02</div>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">Root Cause ID'd</div>
+                                </div>
+                                <div style="flex: 1; min-width: 120px; text-align: center; padding: 12px; background: var(--bg-elevated); border-radius: 6px;">
+                                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--success);">0:05</div>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">Solution Proposed</div>
+                                </div>
+                                <div style="flex: 1; min-width: 120px; text-align: center; padding: 12px; background: var(--bg-elevated); border-radius: 6px;">
+                                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--success);">48hrs</div>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">Bridge Live</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Case Study 4: Creative AI Dashboard -->
+            <div class="case-study">
+                <div class="case-study-header">
+                    <div class="case-study-icon">🎨</div>
+                    <div class="case-study-title">
+                        <h3>AI Creative Workflow Dashboard</h3>
+                        <p>Designing the control layer for multi-model AI creative platforms</p>
+                    </div>
+                </div>
+                <div class="case-study-content">
+                    <div class="case-study-text">
+                        <h4>The Design Challenge</h4>
+                        <p>Creative teams using AI platforms struggle with model selection, prompt consistency, and batch workflow management. Most interfaces treat each generation as a one-off rather than a scalable pipeline. I designed a unified workflow builder concept.</p>
+                        
+                        <h4>Screen-by-Screen Breakdown</h4>
+                        <ul>
+                            <li><strong>Model Hub:</strong> Grid view of available models (FLUX.2, Nano Banana, SDXL, Ideogram) with capability tags and cost-per-generation</li>
+                            <li><strong>Prompt Panel:</strong> Input field with auto-suggest, style memory, and prompt history. One-click enhancement button using LLM</li>
+                            <li><strong>Batch Queue:</strong> Drag-and-drop priority queue with status indicators, estimated completion time, and pause/resume controls</li>
+                            <li><strong>Style Controls:</strong> Consistency sliders, seed locking, reference image upload, and brand color protection</li>
+                            <li><strong>Export Gallery:</strong> Grid view with bulk actions, format selection (PNG, SVG, PSD), and direct Canva/Figma export</li>
+                        </ul>
+
+                        <h4>Design Decisions</h4>
+                        <ul>
+                            <li>Dark mode default — reduces eye strain during long creative sessions</li>
+                            <li>Real-time preview panel — shows output at each pipeline stage</li>
+                            <li>Template library — reduces prompt engineering time by 60%</li>
+                            <li>Keyboard shortcuts — power users can navigate without mouse</li>
+                        </ul>
+
+                        <h4>Tools Used</h4>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Auto Layout</span>
+                            <span class="tech-tag">Component Variants</span>
+                            <span class="tech-tag">Prototyping</span>
+                            <span class="tech-tag">Design Systems</span>
+                            <span class="tech-tag">User Flow Mapping</span>
+                        </div>
+                    </div>
+                    <div class="case-study-visual">
+                        <div class="preview-label" style="margin-bottom: 16px;">Dashboard Preview</div>
+                        <div class="preview-dashboard">
+                            <div class="dash-row">
+                                <div class="dash-card">
+                                    <div class="dash-card-header">Model</div>
+                                    <div class="dash-card-value">FLUX.2</div>
+                                </div>
+                                <div class="dash-card">
+                                    <div class="dash-card-header">Queue</div>
+                                    <div class="dash-card-value up">12 Active</div>
+                                </div>
+                                <div class="dash-card">
+                                    <div class="dash-card-header">Style Lock</div>
+                                    <div class="dash-card-value">ON</div>
+                                </div>
+                            </div>
+                            <div class="dash-row">
+                                <div class="dash-card">
+                                    <div class="dash-card-header">Prompt</div>
+                                    <div class="dash-card-value" style="font-size: 0.8rem;">"Steampunk elephant..."</div>
+                                </div>
+                                <div class="dash-card">
+                                    <div class="dash-card-header">Enhance</div>
+                                    <div class="dash-card-value up">AI ✨</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 12px;">5-screen Figma prototype with interactive flows. Auto Layout components, dark mode system, and 12+ component variants.</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">01</div>
-                    <h4>Discover & Diagnose</h4>
-                    <p>Deep-dive into the problem space. For CS: account health analysis. For AI: creative brief research. For tech: API documentation review. Always start with data, never assumptions.</p>
+            <!-- Case Study 5: Brand Identity System -->
+            <div class="case-study">
+                <div class="case-study-header">
+                    <div class="case-study-icon">🎯</div>
+                    <div class="case-study-title">
+                        <h3>Automated Brand Identity System</h3>
+                        <p>From AI-generated assets to scalable client delivery pipelines</p>
+                    </div>
                 </div>
-                <div class="process-step">
-                    <div class="step-number">02</div>
-                    <h4>Design & Architect</h4>
-                    <p>Build the solution blueprint. For workflows: user flow mapping. For automation: system architecture. For integrations: data mapping and fallback strategies.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">03</div>
-                    <h4>Build & Iterate</h4>
-                    <p>Rapid prototyping with tight feedback loops. For AI: prompt iteration (15+ variations). For code: test-driven development. For CS: pilot with friendly accounts first.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">04</div>
-                    <h4>Automate & Scale</h4>
-                    <p>Turn manual work into systems. Python scripts, n8n workflows, batch processing, and self-healing logic. The goal: eliminate repetitive work, not just speed it up.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">05</div>
-                    <h4>Measure & Optimize</h4>
-                    <p>Define success metrics upfront, then track relentlessly. Conversion rates, processing time, error rates, customer satisfaction. Data drives the next iteration.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">06</div>
-                    <h4>Document & Handoff</h4>
-                    <p>Create playbooks, style guides, and runbooks so teams can replicate and scale without me. Knowledge transfer is as important as the solution itself.</p>
+                <div class="case-study-content">
+                    <div class="case-study-text">
+                        <h4>The Business Problem</h4>
+                        <p>Agencies need to produce brand kits for dozens of clients simultaneously. Manual design work doesn't scale, and pure AI output lacks consistency and brand safety controls. I built a complete pipeline from brief to delivery.</p>
+                        
+                        <h4>System Components</h4>
+                        <ul>
+                            <li><strong>Logo Generator:</strong> Creates 3 style directions (Minimalist, Illustrative, Abstract) per client brief using ImagineArt/Midjourney</li>
+                            <li><strong>Color System:</strong> Auto-generates primary, secondary, accent, and neutral palettes with accessibility checks</li>
+                            <li><strong>Social Templates:</strong> Produces 5 platform-specific templates (Instagram, LinkedIn, Twitter, Facebook, Stories) in Canva</li>
+                            <li><strong>Style Guide:</strong> Auto-generates JSON style guide with usage rules, clear space, and do/don't examples</li>
+                            <li><strong>Delivery Pipeline:</strong> Packages everything into client-ready ZIP with organized folder structure</li>
+                        </ul>
+
+                        <h4>Automation Logic</h4>
+                        <ul>
+                            <li>Input: Client brief (industry, mood, color preference, target audience)</li>
+                            <li>Process: AI generates 3 logo directions → client selects → system auto-generates full kit</li>
+                            <li>Output: Complete brand folder with logos, colors, fonts, templates, and style guide</li>
+                            <li>Scale: 50 client kits generated in under 2 hours vs. 4.5 hours manual per kit</li>
+                        </ul>
+
+                        <h4>Tools Used</h4>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ImagineArt API</span>
+                            <span class="tech-tag">Canva API</span>
+                            <span class="tech-tag">Midjourney</span>
+                            <span class="tech-tag">REST APIs</span>
+                            <span class="tech-tag">Batch Processing</span>
+                            <span class="tech-tag">JSON Schema</span>
+                        </div>
+                    </div>
+                    <div class="case-study-visual">
+                        <div class="preview-label" style="margin-bottom: 16px;">Pipeline Flow</div>
+                        <div class="preview-content">
+<span class="comment"># Brand Kit Automation Pipeline</span>
+Client Brief (industry, mood, colors)
+    ↓
+Logo Generation (3 styles × AI models)
+    ↓
+Color Palette (auto-generated + accessible)
+    ↓
+Social Templates (5 platforms × Canva)
+    ↓
+Style Guide (auto-generated JSON)
+    ↓
+Package & Deliver (organized ZIP)
+
+<span class="comment"># Scale Metrics</span>
+Manual time per kit: <span class="number">4.5</span> hours
+Automated time per kit: <span class="number">2.3</span> minutes
+Time reduction: <span class="number">98%</span>
+Clients served: <span class="number">50+</span> in <span class="number">2</span> hours
+                        </div>
+                        <div style="margin-top: 20px; padding: 16px; background: var(--bg); border-radius: 8px; border: 1px solid var(--border);">
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Generated Assets</div>
+                            <div class="preview-images" style="margin-top: 0;">
+                                <div class="preview-img">🏢</div>
+                                <div class="preview-img">🌿</div>
+                                <div class="preview-img">⚡</div>
+                            </div>
+                            <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 8px;">3 logo variations + 5 social templates + auto style guide</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="about" style="background: var(--bg-card);">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Background</div>
-                <h2>About Me</h2>
-                <p>Customer Success leader with a builder's mindset — applying systems thinking to both creative AI and enterprise operations.</p>
-            </div>
-
-            <div class="case-study" style="max-width: 800px; margin: 0 auto;">
-                <div class="case-study-text">
-                    <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 24px;">
-                        I'm a Customer Success professional with 5+ years of experience helping complex B2B SaaS products land successfully, scale adoption, and retain customers at the enterprise level. My work sits at the intersection of three things most people keep separate: deep customer relationships, technical implementation, and building the automation systems that make both scalable.
-                    </p>
-                    <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 24px;">
-                        Currently leading a CS and onboarding team at a B-Corp platform serving millions of workers across the US, where I own the full customer lifecycle from demo and onboarding through to renewals and expansion — while simultaneously building AI-powered automation systems that process thousands of accounts without additional headcount.
-                    </p>
-                    <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
-                        I'm now expanding into AI creative platforms, bringing my unique combination of customer success expertise, technical implementation skills, and hands-on creative AI work to help teams build and scale both creative workflows and customer operations.
-                    </p>
+            <!-- Case Study 6: Coloring Book -->
+            <div class="case-study">
+                <div class="case-study-header">
+                    <div class="case-study-icon">📖</div>
+                    <div class="case-study-title">
+                        <h3>AI Coloring Book — Steampunk Safari</h3>
+                        <p>Building a content product from prompt to print-ready PDF</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+                <div class="case-study-content">
+                    <div class="case-study-text">
+                        <h4>The Creative Challenge</h4>
+                        <p>Creating a cohesive 7-page coloring book requires style consistency across multiple AI generations — a common pain point for creators using AI platforms. I developed a systematic approach to solve this.</p>
+                        
+                        <h4>My Process</h4>
+                        <ul>
+                            <li>Developed a master prompt template with locked style parameters</li>
+                            <li>Used reference image seeding for character consistency across all pages</li>
+                            <li>Iterated 15+ prompts per page to achieve clean line art quality</li>
+                            <li>Compiled into print-ready PDF with Canva, including cover and title page</li>
+                        </ul>
 
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="https://linkedin.com/in/hameedshah" target="_blank">LinkedIn</a>
-                <a href="https://github.com/hameedshah" target="_blank">GitHub</a>
-                <a href="mailto:hameed@example.com">Email</a>
-                <a href="#" target="_blank">Resume PDF</a>
-            </div>
-            <p class="footer-copy">Built with AI assistance • Updated May 2026</p>
-        </div>
-    </footer>
+                        <h4>Prompt Engineering Breakdown</h4>
+                        <ul>
+                            <li><strong>Base:</strong> "Detailed illustration of [subject], steampunk style"</li>
+                            <li><strong>Style Lock:</strong> "Bold clean black lines, no shading, white background"</li>
+                            <li><strong>Consistency:</strong> Same seed + reference image for all pages</li>
+                            <li><strong>Quality Control:</strong> Manual review + touch-up in vector editor</li>
+                        </ul>
 
-    <script>
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-links a');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (scrollY >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+                        <h4>Model Comparison Matrix</h4>
+                        <table class="comparison-table">
+                            <tr>
+                                <th>Model</th>
+                                <th>Line Quality</th>
+                                <th>Consistency</th>
+                                <th>Best For</th>
+                            </tr>
+                            <tr>
+                                <td>FLUX.2</td>
+                                <td>Excellent</td>
+                                <td>High</td>
+                                <td>Complex illustrations</td>
+                            </tr>
+                            <tr>
+                                <td>Nano Banana</td>
+                                <td>Good</td>
+                                <td>Medium</td>
+                                <td>Fast iteration</td>
+                            </tr  
